@@ -1,0 +1,28 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Minutiae'
+
+
+
+[params]
+  googlefonts = "//fonts.googleapis.com/css?family=Roboto"
+  custom_css = ["css/style.css"] 
+
+[menu]
+ [[menu.main]]
+    identifier = "Project"
+    name = "Project"
+    url = "/Project"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "scripts"
+    name = "Scripts"
+    url = "/scripts"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"
+    weight = 20
