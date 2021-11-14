@@ -2,11 +2,9 @@ baseURL = 'https://steigersdorfermarah.github.io/hugo-minutiae/'
 languageCode = 'en-us'
 title = 'Minutiae'
 
-
-
 [params]
-  googlefonts = "//fonts.googleapis.com/css?family=Roboto"
-  custom_css = ["css/style.css"] 
+  googlefonts = "https://fonts.googleapis.com/css?family=Roboto"
+  custom_css = ["css/style.css"]
 
 [menu]
  [[menu.main]]
