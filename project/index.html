@@ -4,14 +4,14 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
-<title>Unser Projekt | Minutiae</title>
+<title> | Minutiae</title>
 <link rel=stylesheet href=/css/style.css type=text/css media=all>
 </head>
 <body>
 <link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
 <header class=site-header>
 <nav class=site-nav>
-<img src=../Minutiae2Logo.png alt=minutiae width=50>
+<img src=https://steigersdorfermarah.github.io/hugo-minutiae//Minutiae2Logo.png alt=minutiae width=50>
 <a class=logo href=https://steigersdorfermarah.github.io/hugo-minutiae/>
 Minutiae
 </a>
@@ -29,11 +29,14 @@ Minutiae
 </nav>
 </header>
 <main class=content>
-<h1>Unser Projekt</h1>
+<h1></h1>
 <link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
-<img src=../pexels.jpg width=100% height=20%>
-<h1>Unser Projekt</h1>
-<p>Minutiae ist eine Open Source, MIT Lizenzierte Software für ein Fingerabdrucksystem und ein Kooperationsprojekt mit dem OTELO Gmunden.
+<style>#headerproject{background-image:url(../pexels.jpg);background-size:cover;background-attachment:fixed;background-position:50%;width:100%;height:20%;margin-top:7%;margin-bottom:5%}</style>
+<div id=headerproject style=text-align:center>
+<h3 style=text-align:center;padding-top:3%;font-size:50px;color:#000;background-position:top>Unser Projekt</h3>
+</div>
+<p style=margin-bottom:7%>
+Minutiae ist eine Open Source, MIT Lizenzierte Software für ein Fingerabdrucksystem und ein Kooperationsprojekt mit dem OTELO Gmunden.
 Während Minutiae das Frontend, das Backend und die Datenbank bereitstellt, übernimmt das Co-Projekt die Hardware
 und den hardwarenahen Code. Die Projektidee ist ein System, in dem Benutzer und Administratoren existieren.
 Benutzer können Fingerabdrucksensoren verwenden und Türen entsprechend ihrer Berechtigungen ent- / verriegeln.
@@ -41,7 +44,11 @@ Für Administratoren gibt es eine Weboberfläche, über die sie verschiedene Sys
 Dies zB. beinhaltet das Hinzufügen neuer Benutzer und Türen.
 </p>
 <hr>
-<h3 id=hardware>Hardware</h3>
+<link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
+<style>#headerhardware{background-image:url(../hardwarebanner.jpg);background-size:cover;background-attachment:fixed;background-position:50%;width:100%;height:20%;margin-top:7%;margin-bottom:5%}</style>
+<div id=headerhardware style=text-align:center>
+<h3 style=text-align:center;padding-top:3%;font-size:50px;color:#000;background-position:top>Hardware</h3>
+</div>
 <h4 id=was-wird-benötigt>Was wird benötigt?</h4>
 <p><link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
 <li>Ein Raspberry Pi (= Mikrocontroller) + benutzerdefiniertes Shield pro Tür</li>
@@ -49,28 +56,50 @@ Dies zB. beinhaltet das Hinzufügen neuer Benutzer und Türen.
 <li>Ein funktionierendes lokales Netzwerk (=> Router/Switch/..),
 aber nicht unbedingt eine Internetverbindung für das laufende System</li>
 <link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
-<p>Jeder Mikrocontroller verwaltet eine einzelne Tür und hat auch ein eigenes Backend,
+<p style=margin-bottom:7%>
+Jeder Mikrocontroller verwaltet eine einzelne Tür und hat auch ein eigenes Backend,
 Frontend und darauf laufende Datenbank. Der Vorteil dieses dezentralen Systems besteht darin,
 dass selbst wenn eine Tür aus irgendeinem Grund von den anderen Türen getrennt ist,
 es funktioniert immer noch von selbst (auch wenn Änderungen dafür natürlich nicht mehr wirksam sind),
-und es gibt auch keinen zentralen Server, wenn das Sterben das ganze System funktionsunfähig machen würde.</p>
+und es gibt auch keinen zentralen Server, wenn das Sterben das ganze System funktionsunfähig machen würde.
+</p>
 </p>
 <hr>
 <link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
-<h3>Frontend</h3>
+<style>#header{background-image:url(../frontendbanner.jpg);background-size:cover;background-attachment:fixed;background-position:50%;width:100%;height:20%;margin-top:7%;margin-bottom:5%}</style>
+<div id=header style=text-align:center>
+<h3 style=text-align:center;padding-top:3%;font-size:50px;color:#000;background-position:top>Frontend</h3>
+</div>
 <p>Das Frontend ist in React geschrieben und bietet zusammengefasst folgende Funktionalität:</p>
+<div style=margin-bottom:7%>
 <li>Hinzufügen neuer Benutzer und Admins und speichern von weiteren Informationen wie Adresse, vollständiger Name, Telefonnummer usw., falls gewünscht.</li>
 <li>Hinzufügen eines Fingerabdruckes für einen vorhandenen Benutzer.</li>
 <li>Zugang für bestimmte Türen gewären.</li>
 <li>Hinzufügen neuer Türen und laden der Konfigurationsdateien für ihren Controller.</li>
 <li>Logs der Systemnutzung anzeigen</li>
+</div>
 <hr>
 <link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
-<h3>Backend</h3>
-<p>Das Backend von NestJ stellt einerseits die Daten für das Frontend über die REST-Api bereit und übernimmt über MQTT
+<style>#headerbackend{background-image:url(../backendbanner.jpg);background-size:cover;background-attachment:fixed;background-position:50%;width:100%;height:20%;margin-top:7%;margin-bottom:5%}</style>
+<div id=headerbackend style=text-align:center>
+<h3 style=text-align:center;padding-top:3%;font-size:50px;color:#000;background-position:top>Backend</h3>
+</div>
+<p style=margin-bottom:7%>
+Das Backend von NestJ stellt einerseits die Daten für das Frontend über die REST-Api bereit und übernimmt über MQTT
 auch die Kommunikation mit der Fingerabdrucksensor-Steuerungssoftware. Dies wird zB benötigt zum Beibehalten der Protokolle,
 zum Abrufen der Fingerabdrücke für einen neuen Benutzer und zum Überprüfen, ob der Benutzer Zugang für eine Tür hat,
 wenn er versucht, einzutreten.
+</p>
+<hr>
+<link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
+<style>#headerdatabase{background-image:url(../databasebanner.png);background-size:cover;background-attachment:fixed;background-position:50%;width:100%;height:20%;margin-top:7%;margin-bottom:5%}</style>
+<div id=headerdatabase style=text-align:center>
+<h3 style=text-align:center;padding-top:3%;font-size:50px;color:#000;background-position:top>Database</h3>
+</div>
+<p style=margin-bottom:7%>
+Als Datenbank-Technologie kommt MariaDb mit Galera Cluster zum Einsatz.
+Da das System dezentralisiert ist, sorgt der Galera Cluster für die Synchronisierung aller Datenbanken.
+Damit egal an welchem Raspberry-Frontend der Admin Änderungen am System vornimmt, es an jeder Tür wirksam wird.
 </p>
 <link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
 </main>

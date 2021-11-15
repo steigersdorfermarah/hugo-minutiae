@@ -4,14 +4,14 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
-<title>Installationsskript | Minutiae</title>
+<title>Installation des Systems | Minutiae</title>
 <link rel=stylesheet href=/css/style.css type=text/css media=all>
 </head>
 <body>
 <link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
 <header class=site-header>
 <nav class=site-nav>
-<img src=../Minutiae2Logo.png alt=minutiae width=50>
+<img src=https://steigersdorfermarah.github.io/hugo-minutiae//Minutiae2Logo.png alt=minutiae width=50>
 <a class=logo href=https://steigersdorfermarah.github.io/hugo-minutiae/>
 Minutiae
 </a>
@@ -29,20 +29,36 @@ Minutiae
 </nav>
 </header>
 <main class=content>
-<h1>Installationsskript</h1>
-<link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
-<h3>Frontend</h3>
-<p>Das Frontend ist in React geschrieben und bietet zusammengefasst folgende Funktionalität:</p>
-<li>Hinzufügen neuer Benutzer und Admins und speichern von weiteren Informationen wie Adresse, vollständiger Name, Telefonnummer usw., falls gewünscht.</li>
-<li>Hinzufügen eines Fingerabdruckes für einen vorhandenen Benutzer.</li>
-<li>Zugang für bestimmte Türen gewären.</li>
-<li>Hinzufügen neuer Türen und laden der Konfigurationsdateien für ihren Controller.</li>
-<li>Logs der Systemnutzung anzeigen</li>
-<link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
-<li>Ein Raspberry Pi (= Mikrocontroller) + benutzerdefiniertes Shield pro Tür</li>
-<li>Ein Fingerabdrucksensor pro Tür</li>
-<li>Ein funktionierendes lokales Netzwerk (=> Router/Switch/..),
-aber nicht unbedingt eine Internetverbindung für das laufende System</li>
+<h1>Installation des Systems</h1>
+<p>Die Installation beinhaltet nur des ersten Raspberry, zum Hinzufügen weiterer Türen folgen Sie bitte den Anweisungen des &lsquo;Updaten des Systems&rsquo;.</p>
+<h3 id=betriebssystem-herunterladen>Betriebssystem herunterladen</h3>
+<p>Laden Sie Raspberry Pi Imager herunter und installieren Sie es auf einem Computer mit einem SD-Kartenleser.
+Legen Sie die SD-Karte, die Sie mit Ihrem Raspberry Pi verwenden, in das Lesegerät ein und führen Sie Raspberry Pi Imager aus.
+Sie müssen aus einigen verschiedenen OS-Images wählen. Wir empfehlen die Verwendung von raspbian lite (ohne GUI),
+Sie können auch ein anderes verwenden, wie zum Beispiel raspbian (hat keine Benutzeroberfläche)
+Wiederholen Sie diesen Schritt für jeden Tür-Raspberry.</p>
+<h3 id=betriebssystem-herunterladen-1>Betriebssystem herunterladen</h3>
+<ul>
+<li>Laden Sie Raspberry Pi Imager herunter und installieren Sie es auf einem Computer mit einem SD-Kartenleser.</li>
+<li>Legen Sie die SD-Karte, die Sie mit Ihrem Raspberry Pi verwenden, in das Lesegerät ein und führen Sie Raspberry Pi Imager aus.
+Sie müssen aus einigen verschiedenen OS-Images wählen. Wir empfehlen die Verwendung von raspbian lite (ohne GUI),
+Sie können auch ein anderes verwenden, wie zum Beispiel raspbian (hat eine Benutzeroberfläche)</li>
+<li>Wiederholen Sie diesen Schritt für jeden Tür-Raspberry.</li>
+</ul>
+<h3 id=konfiguration>Konfiguration</h3>
+<ul>
+<li>
+<p>SD-Karte, Monitor und Tastatur in Raspberry einlegen.
+Der Standard-Benutzername für raspbian lite ist <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#e6db74>`pi`</span></code></pre></div> und das Passwort <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#e6db74>`raspberry`</span></code></pre></div></p>
+</li>
+<li>
+<p>Da das Tastaturlayout standardmäßig englisch ist, müssen Sie <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#e6db74>`raspberrz`</span></code></pre></div> eingeben, wenn Sie eine deutsche Tastatur verwenden</p>
+</li>
+<li>
+<p>Änder das Passwort
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#e6db74>`passwd`</span></code></pre></div></p>
+</li>
+</ul>
 <link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
 </main>
 <footer>
