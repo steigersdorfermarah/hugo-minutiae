@@ -1,12 +1,12 @@
 ---
-title: 'Unser Projekt'
+
 ---
 
 {{<project>}}
 
 ---
 
-### Hardware
+{{<hardwarebanner>}}
 
 #### Was wird benötigt?
 {{<requirements>}}
@@ -14,9 +14,11 @@ title: 'Unser Projekt'
 
 
 ---
-
 {{<frontend>}}
 
 ---
-
 {{<backend>}}
+
+---
+
+{{<database>}}

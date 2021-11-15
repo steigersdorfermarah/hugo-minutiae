@@ -6,11 +6,12 @@
 
 body {
   color: #333;
-  font-size: 100%;
+  font-size: 105%;
   line-height: 1.5;
   max-width: 55rem;
   padding: 1rem;
   margin: 0 auto;
+  text-align: justify;
 }
 
 .content {
@@ -37,6 +38,7 @@ input:hover{
 }
 
 .site-nav a {
+  font-size: 100%;
   display: block;
   float: left;
   padding: 1rem;
