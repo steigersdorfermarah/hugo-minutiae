@@ -4,22 +4,23 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
-<title>The project | Minutiae</title>
+<title>Unser Projekt | Minutiae</title>
 <link rel=stylesheet href=/css/style.css type=text/css media=all>
 </head>
 <body>
 <link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
 <header class=site-header>
 <nav class=site-nav>
+<img src=../Minutiae2Logo.png alt=minutiae width=50>
 <a class=logo href=https://steigersdorfermarah.github.io/hugo-minutiae/>
 Minutiae
 </a>
 <ul class=main-menu>
 <li>
-<a href=/hugo-minutiae/project>Project</a>
+<a href=/hugo-minutiae/project>Projekt</a>
 </li>
 <li>
-<a href=/hugo-minutiae/scripts>Scripts</a>
+<a href=/hugo-minutiae/scripts>Skripten</a>
 </li>
 <li>
 <a href=/hugo-minutiae/about>About</a>
@@ -28,28 +29,48 @@ Minutiae
 </nav>
 </header>
 <main class=content>
-<h1>The project</h1>
+<h1>Unser Projekt</h1>
 <link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
-<p>Minutiae is an open source, MIT Licenced software for a fingerprint system and a cooperation project
-with the OTELO Gmunden. While Minutiae provides the frontend, the backend and the database, the co-projects
-takes over the hardware and the hardware related code.
-The project idea is a system in which users and administrators exist.
-Users can use fingerprint sensors and unlock / lock doors according to their authorizations.
-There is a web interface for administrators through which they can make various system settings.
-This eg. includes adding new users and doors.</p>
+<img src=../pexels.jpg width=100% height=20%>
+<h1>Unser Projekt</h1>
+<p>Minutiae ist eine Open Source, MIT Lizenzierte Software für ein Fingerabdrucksystem und ein Kooperationsprojekt mit dem OTELO Gmunden.
+Während Minutiae das Frontend, das Backend und die Datenbank bereitstellt, übernimmt das Co-Projekt die Hardware
+und den hardwarenahen Code. Die Projektidee ist ein System, in dem Benutzer und Administratoren existieren.
+Benutzer können Fingerabdrucksensoren verwenden und Türen entsprechend ihrer Berechtigungen ent- / verriegeln.
+Für Administratoren gibt es eine Weboberfläche, über die sie verschiedene Systemeinstellungen vornehmen können.
+Dies zB. beinhaltet das Hinzufügen neuer Benutzer und Türen.
+</p>
 <hr>
 <h3 id=hardware>Hardware</h3>
-<h4 id=requirements>Requirements</h4>
+<h4 id=was-wird-benötigt>Was wird benötigt?</h4>
 <p><link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
-<li>One Raspberry Pi (= Microcontroller) + custom shield per door</li>
-<li>One fingerprint sensor per door</li>
-<li>A working local network (=> router/switch/..), but not necessarily an internet connection for the running system</li>
+<li>Ein Raspberry Pi (= Mikrocontroller) + benutzerdefiniertes Shield pro Tür</li>
+<li>Ein Fingerabdrucksensor pro Tür</li>
+<li>Ein funktionierendes lokales Netzwerk (=> Router/Switch/..),
+aber nicht unbedingt eine Internetverbindung für das laufende System</li>
 <link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
-<p>Each microcontroller is managing one single door and also has its own backend,
-frontend and database running on it. The advantage of this decentralized system is,
-that even if one door is seperated from the other doors for some reason,
-it will still work on its own (even though changes are not effective for it anymore, of course),
-and also there is no central server if dying would make the whole system inoperable.</p>
+<p>Jeder Mikrocontroller verwaltet eine einzelne Tür und hat auch ein eigenes Backend,
+Frontend und darauf laufende Datenbank. Der Vorteil dieses dezentralen Systems besteht darin,
+dass selbst wenn eine Tür aus irgendeinem Grund von den anderen Türen getrennt ist,
+es funktioniert immer noch von selbst (auch wenn Änderungen dafür natürlich nicht mehr wirksam sind),
+und es gibt auch keinen zentralen Server, wenn das Sterben das ganze System funktionsunfähig machen würde.</p>
+</p>
+<hr>
+<link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
+<h3>Frontend</h3>
+<p>Das Frontend ist in React geschrieben und bietet zusammengefasst folgende Funktionalität:</p>
+<li>Hinzufügen neuer Benutzer und Admins und speichern von weiteren Informationen wie Adresse, vollständiger Name, Telefonnummer usw., falls gewünscht.</li>
+<li>Hinzufügen eines Fingerabdruckes für einen vorhandenen Benutzer.</li>
+<li>Zugang für bestimmte Türen gewären.</li>
+<li>Hinzufügen neuer Türen und laden der Konfigurationsdateien für ihren Controller.</li>
+<li>Logs der Systemnutzung anzeigen</li>
+<hr>
+<link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
+<h3>Backend</h3>
+<p>Das Backend von NestJ stellt einerseits die Daten für das Frontend über die REST-Api bereit und übernimmt über MQTT
+auch die Kommunikation mit der Fingerabdrucksensor-Steuerungssoftware. Dies wird zB benötigt zum Beibehalten der Protokolle,
+zum Abrufen der Fingerabdrücke für einen neuen Benutzer und zum Überprüfen, ob der Benutzer Zugang für eine Tür hat,
+wenn er versucht, einzutreten.
 </p>
 <link rel=stylesheet type=text/css href=https://steigersdorfermarah.github.io/hugo-minutiae/css/style.css>
 </main>
