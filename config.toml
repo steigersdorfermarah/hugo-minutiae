@@ -8,14 +8,14 @@ title = 'Minutiae'
 
 [menu]
  [[menu.main]]
-    identifier = "Project"
-    name = "Project"
+    identifier = "Projekt"
+    name = "Projekt"
     url = "/Project"
     weight = 10
 
   [[menu.main]]
-    identifier = "scripts"
-    name = "Scripts"
+    identifier = "Skripten"
+    name = "Skripten"
     url = "/scripts"
     weight = 10
 

@@ -1,5 +1,5 @@
 ---
-title: 'The project'
+title: 'Unser Projekt'
 ---
 
 {{<project>}}
@@ -8,6 +8,15 @@ title: 'The project'
 
 ### Hardware
 
-#### Requirements
+#### Was wird benötigt?
 {{<requirements>}}
 {{<hardware>}}
+
+
+---
+
+{{<frontend>}}
+
+---
+
+{{<backend>}}
